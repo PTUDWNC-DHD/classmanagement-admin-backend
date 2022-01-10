@@ -1,0 +1,39 @@
+{
+  "name": "classmanagement-admin-backend",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Nguyen Ngoc Duc <55783340+nnduc2207@users.noreply.github.com>",
+  "keywords": [
+    "express",
+    "API Server",
+    "RESTful"
+  ],
+  "license": "ISC",
+  "main": "src/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PTUDWNC-DHD/classmanagement-admin-backend.git"
+  },
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "helmet": "^5.0.1",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pino-http": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
