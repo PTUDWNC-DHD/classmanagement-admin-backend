@@ -31,6 +31,9 @@ app.use(cors())
 // adding morgan to log HTTP requests
 app.use(morgan('combined'))
 
+// adding passport to register authenticate strategies
+const passport = require('./middleware/passport')
+app.use(passport.initialize());
 // use router 
 useRoute(app)
 
