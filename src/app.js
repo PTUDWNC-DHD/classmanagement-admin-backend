@@ -10,6 +10,7 @@ const { urlencoded, json } = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
 const morgan = require('morgan')
+const mongoose = require('mongoose')
 
 // import routes
 const useRoute = require('./routes')
@@ -32,6 +33,19 @@ app.use(morgan('combined'))
 
 // use router 
 useRoute(app)
+
+// connect to mongodb database
+mongoose.connect(
+    process.env.DB_CONNECTION, 
+    { 
+      useNewUrlParser: true, 
+      useUnifiedTopology: true 
+    }
+  )
+  .then(
+    () => console.log('Connected to MongoDB successfully !!!'),
+    err => console.log('Connect to MongoDB error:', err)
+  ) 
 
 // starting the server
 const PORT = process.env.PORT || 3000;
