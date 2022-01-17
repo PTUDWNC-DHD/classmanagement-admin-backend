@@ -2,6 +2,9 @@ const crypto = require("crypto")
 const Class = require("./model")
 
 const getClass = async (id) => {
+    if (!id) {
+        return await Class.find()
+    }
     const classroom = await Class.findById(id)
     return classroom
 }
